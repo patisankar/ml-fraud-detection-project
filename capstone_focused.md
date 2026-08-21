@@ -1,5 +1,14 @@
-Capstone Project Focus Areas
-1. Business Problem and Decisioning
+**Capstone Project Focus Areas**
+Module 8 → feature engineering, overfitting, validation
+Module 9 → cross-validation, GridSearchCV, regularization
+Module 12 → metrics, thresholds, precision/recall/ROC
+Module 13 → Logistic Regression baseline
+Module 14 → Decision Trees
+Module 20 → Random Forest + Gradient Boosting
+
+Useful but secondary: Module 15 for bias-variance/optimization and Module 16/17 for comparing classifiers.
+
+**1. Business Problem and Decisioning**
 Define the objective clearly:
 Predict whether an online-payment transaction is fraudulent and convert the fraud probability into an approve, review, or decline decision.
 Explain the business trade-offs:
@@ -7,7 +16,7 @@ Missed fraud creates financial loss.
 False positives reject legitimate customers.
 Manual reviews create operational cost.
 Describe the project as an online-payment fraud risk-decisioning capstone. Do not claim direct production PayFac, PSP, acquirer, or PayPal experience.
-2. Data Understanding and Quality
+**2. Data Understanding and Quality**
 Document:
 Dataset size and fraud percentage
 Available columns
@@ -25,7 +34,7 @@ Receiver balance
 Transaction frequency
 Repeated transaction behavior
 Balance-difference features
-3. Exploratory Data Analysis and Feature Engineering
+**3. Exploratory Data Analysis and Feature Engineering**
 Create visualizations for:
 Fraud versus legitimate transaction counts
 Fraud rate by transaction type
@@ -42,7 +51,7 @@ receiver_transaction_count
 same_sender_frequency
 same_receiver_frequency
 Explain why each feature may help identify fraud.
-4. Learning Type and Modeling
+**4. Learning Type and Modeling**
 The project uses:
 Supervised learning
 Binary classification
@@ -53,7 +62,7 @@ Logistic Regression as an interpretable baseline
 Random Forest as a nonlinear ensemble model
 XGBoost as the primary tabular-data model
 Because fraud is highly imbalanced, use class weights or imbalance-handling techniques only on the training data.
-5. Model Evaluation
+**5. Model Evaluation**
 Do not rely on accuracy alone.
 Use:
 Precision
@@ -76,7 +85,7 @@ Fraud cost
 False-positive cost
 Manual-review capacity
 Desired approval rate
-6. Error Analysis and Explainability
+**6. Error Analysis and Explainability**
 Analyze:
 False positives
 False negatives
@@ -85,7 +94,7 @@ Feature importance
 Model behavior across transaction types
 Use SHAP explanations if appropriate.
 The goal is not only to maximize a metric, but also to understand why the model makes each decision and what business impact it creates.
-7. Full ML Lifecycle
+**7. Full ML Lifecycle**
 Demonstrate the complete workflow:
 Data ingestion
 → Data validation
@@ -97,7 +106,7 @@ Data ingestion
 → Inference
 → Monitoring
 → Retraining
-8. Monitoring and Retraining
+**8. Monitoring and Retraining**
 Monitor:
 Fraud-rate changes
 Feature drift
@@ -106,7 +115,7 @@ Precision and recall degradation
 Prediction-score distribution
 Data-quality failures
 Define when investigation or retraining should be triggered.
-9. Deployment Architecture
+**9. Deployment Architecture**
 Only claim GCP implementation if you actually build it. Otherwise describe it as a proposed or prototyped architecture.
 Possible architecture:
 Cloud Storage / BigQuery
