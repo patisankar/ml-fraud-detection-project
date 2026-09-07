@@ -39,4 +39,18 @@ It convert to category to onehotencoder + number to standardsclar
 5. AUC measures how well the model separates legitimate transactions from fraud.
 6. AUC closer to 1.0 indicates better performance.
 
+**False/True positives**
+
+```python
+no_probs = lgr_pipe.predict_proba(X_test)[:, 0]
+
+[:, 0]  # probability of No
+[:, 1]  # probability of Yes
+
+
+```
+**Importent features**
+
+Using co_effents (13.3 assign)
+
 
